@@ -42,7 +42,7 @@ selected_category = st.selectbox("Choose a Category", categories)
 # Filter data based on selection
 filtered_df = df[df["Category"] == selected_category]
 
-# Refine- Choose Sub-Categories
+# Choose Sub-Categories
 # 2.1 Get sub-categories from filtered category data
 subcategories = filtered_df["Sub_Category"].unique()
 
@@ -68,7 +68,7 @@ st.write(f"### Sales by Sub_Category ({selected_category})")
 st.line_chart(subcat_sales)
 
 
-# 4. Computer Three Metrics
+# 4. Show Three Metrics
 total_sales = filtered_df_subcat["Sales"].sum()
 total_profit = filtered_df_subcat["Profit"].sum()
 
